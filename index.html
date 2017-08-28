@@ -14,6 +14,7 @@
 body 
 	{
 		font-family: serif;
+		
 	}
 
 .mySlides {display:none; height: 100%;}
@@ -52,24 +53,105 @@ body
 
 
 
-  @media screen and (max-width: 768px) 
+@media only screen and (max-device-width: 480px)		/* styles for mobile browsers smaller than 480px; (iPhone) */
   {
   
   
-    .col-sm-12 {
+    .col-sm-12 
+    	{
+    		
 	    	text-align: center  
-		margin: 25px 0;
+			margin: 25px 0;
+			
+   		
+    	}
+	  
+	.content
+			{
+				height: 1700px;
+				padding: 20px 0 20px 0;
+	  		}
+		
+
+	}
+
+
+
+
+@media only screen and (device-width:768px)		/* default iPad screens */
+	{
+      .col-sm-12 
+      		{
+	    		text-align: center  
+				margin: 25px 0;
    		
     		}
 	  
 	.content
 		{
-			height:1000px;
-			padding: 20px 0 20px 0;
+			height: 1290px;
+			padding: 30px 0 20px 0;
 	  	}
-		
+	  	
+	
+    }
+    
+    
+    
+    @media only screen and (min-width:1024px)   /*  ipad pro 	*/
+    {
+    
+   	 .col-sm-12 
+      		{
+	    		text-align: center  
+				margin: 25px 0;
+   		
+    		}
+	  
+	.content
+		{
+			height: 1000px;
+			padding: 30px 0 20px 0;
+	  	}
+    
+    
+    }
+    
+    
 
-	}
+
+.content{
+    background-color:White;
+    animation: image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+}
+
+
+
+@keyframes image{
+    0%{
+background-color: light blue;
+}
+25%/{
+    background-color: light red;
+}
+50%{
+    background-color: light green;
+}
+75%{
+
+    background-color: brown;
+}
+100%{
+    background-color: orange;
+    }
+  }  
+
+
+
+
+
 
 
 	
@@ -82,13 +164,18 @@ body
 
 
 
+
+
+
+
+
 <div class="container">
 	<div class="row ">
 	
 		
 	
-		<div class="col-sm-12 content" style="">
-  			<h1><b>Check Out Your Personality</b></h1>
+		<div class="col-sm-12 content">
+  			<h1><b>Check Out Your Today's Personality</b></h1>
    			
    			
    			<div class="contain">
@@ -96,9 +183,7 @@ body
    			<div class="">
    
   				<div class="mySlides">
-  					
     				<h2>Biggest Kamchor</h2>
-    				
   				</div>
 
   				<div class="mySlides">
@@ -172,7 +257,7 @@ body
   		 			<h2>Emotional</h2>
   				</div>
   				
-    			<div class="mySlides">
+    				<div class="mySlides">
   		 			<h2>Hero</h2>
   				</div>				
   				
@@ -248,7 +333,7 @@ body
   					
   					
   				<div class="contain">
-  					<img alt="hi" src="img\mountain2.jpg" style="width: 150px;">
+  					<img alt="hi" src="F:\Eclipse WorkSpace\Kaha Web\img\mountain2.jpg" style="width: 30%;">
   					<h1>Take a Screen Shoot</h1>	
   				</div>
   			
@@ -259,9 +344,9 @@ body
   		</div>
 
   		
+
   		
-  		
-  		
+  		  		
   		
 	</div>
 </div>
@@ -283,6 +368,14 @@ function carousel() {
     setTimeout(carousel, 25); 
 }
 </script>
+
+
+
+
+
+
+
+
 
 
 </body>
