@@ -8,13 +8,17 @@
     <!-- Optional Bootstrap theme -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+    
     
 <style>
 
 body 
 	{
-		font-family: serif;
+		 font-family: "Gruppo", "Trebuchet MS", "Arial";
+		
 	}
+
 
 .mySlides {display:none; height: 100%;}
 
@@ -24,9 +28,7 @@ body
 			text-align: center;
 			margin: 10px;
 			padding: 10px 0 35px 0;
-			border: 2px solid black;
 			height: 600px;
-			
 		}
 		
 		
@@ -52,31 +54,245 @@ body
 
 
 
-  @media screen and (max-width: 768px) 
+@media only screen and (max-device-width: 480px)		/* styles for mobile browsers smaller than 480px; (iPhone) */
   {
   
   
-    .col-sm-12 {
+    .col-sm-12 
+    	{
+    		
 	    	text-align: center  
-		margin: 25px 0;
+			margin: 25px 0;
+			
    		
-    		}
+    	}
 	  
 	.content
-		{
-			height:600px;
-			padding: 20px 0 20px 0;
-	  	}
+			{
+				
+				height: 1700px;
+				padding: 20px 0 20px 0;
+	  		}
+	  		
+	  		
+	  		
+	  	img{
+				width:100% !important; 
+				max-width: 600px !important;
+	  			height: auto !important;
+	  		}
 		
 
 	}
 
 
+
+
+@media only screen and (device-width:768px)		/* default iPad screens */
+	{
+      .col-sm-12 
+      		{
+	    		text-align: center  
+				margin: 25px 0;
+   		
+    		}
+	  
+	.content
+		{
+			height: 1290px;
+			padding: 30px 0 20px 0;
+	  	}
+	  	
+	  	
+	  img{
+
+	  			width:100% !important; 
+				max-width: 600px !important;
+	  			height: auto !important;
+
+	  		}
+	
+    }
+    
+    
+    
+    
+    @media only screen and (min-width:1024px)   /*  ipad pro 	*/
+    {
+    
+   	 .col-sm-12 
+      		{
+	    		text-align: center  
+				margin: 25px 0;
+   		
+    		}
+	  
+	.content
+		{
+			height: 1300px;
+			padding: 30px 0 20px 0;
+	  	}
+	  	
+	  	
+	  img{
+
+	  			width:100% !important; 
+				max-width: 650px !important;
+	  			height: auto !important;
+
+	  		}
+    
+    
+    }
+    
+    
+ 
+ 
+
+		
+		
+		
+		   
+    
+    
+    
+/* Changes in background color  */
+
+body{
+    background-color:White;
+    animation: image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+    animation:image 10s infinite alternate;
+}
+
+
+
+@keyframes image{
+    0%{
+background-color: #EC8911;		/*   // orange   */
+}
+15%/{
+	
+	background-color: #DE221F ;			/*  //red  */
+    
+}
+30%{
+    background-color: #2FC3EB ;					/*   sky blue   */
+}
+
+45%{
+	background-color: #D59CB3;
+}
+60%{
+
+    background-color: #9EE135 ; 			/*   // Green   */
+}
+75%{
+    background-color: #6B73A5;			/*   //Dark Blue   */
+    }
+    
+90%{
+	background-color: #F1CF25;      /* Yellow */
+}
+  }  
+  
+
+
+
+
+
+
+/* Text font-family 		*/
+
+@font-face {
+    font-family: 'Kremlin';
+    src: url('/resources/fonts/kremlin.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+
+
+ .counter
+		{
+			background-color: white;
+			color:black;
+			font-weight:bold;
+			font-size: 30px;
+			
+			
+			width:100px;
+			letter-spacing: 2px;
+			margin:10px;
+			padding:0px;
+			
+			box-shadow: 2px 1px 1px 1px black  ;
+			
+			border-color: #9ABFA7;
+			border-radius: 20px;
+			
+		} 
+		
+		
+
+
+
+
 	
 </style>
 
+
+
+
+
+
+
+
+<SCRIPT>
+expireDate = new Date
+expireDate.setMonth(expireDate.getMonth()+6)
+jcount = eval(cookieVal("jaafarCounter"))
+jcount++
+document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
+
+function cookieVal(cookieName) {
+thisCookie = document.cookie.split("; ")
+for (i=0; i<thisCookie.length; i++){
+if (cookieName == thisCookie[i].split("=")[0]){
+return thisCookie[i].split("=")[1]
+}
+}
+return 0
+}
+
+function page_counter(){
+for (i=0;i<(7-jcount.toString().length);i++)
+document.write('<span class="counter">0</span>')
+for (y=0;y<(jcount.toString().length);y++)
+document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
+}
+</SCRIPT>
+
+<SCRIPT>
+page_counter(jcount);
+</SCRIPT>
+
+
+
+
+
+
+
 </head>
 <body>
+
+
+
+
+
 
 
 
@@ -87,22 +303,20 @@ body
 	
 		
 	
-		<div class="col-sm-12 content" style="">
-  			<h1><b>Check Out Your Personality</b></h1>
+		<div class="col-sm-12 content">
+  			<h1><b>Check Out Your Today's Personality</b></h1>
    			
    			
    			<div class="contain">
    			<div class="row">
-   			<div class="">
+   			
    
   				<div class="mySlides">
-  					
-    				<h2>Biggest Kamchor</h2>
-    				
+    				<h2>Embraces Changes</h2>
   				</div>
 
   				<div class="mySlides">
-  		 			<h2>Aadarsh Insan</h2>
+  		 			<h2>Values Solitude</h2>
  		 		</div>
 
   				<div class="mySlides">
@@ -123,7 +337,7 @@ body
   				</div>
   			
   				<div class="mySlides">
-  		 			<h2>Fun Loving & Caring</h2>
+  		 			<h2>Fun Loving and Caring</h2>
   				</div>
   				
   				
@@ -137,17 +351,17 @@ body
   				
   				
   				 <div class="mySlides">
-  		 			<h2>Sabka Baap</h2>
+  		 			<h2>Slacker</h2>
   				</div>
   				
   				
   				 <div class="mySlides">
-  		 			<h2>Helpful</h2>
+  		 			<h2> Helps people with life issues </h2>
   				</div>
   				
   				
   				<div class="mySlides">
-  		 			<h2>Sharif</h2>
+  		 			<h2>Celebrates others success</h2>
   				</div>
   				
   				<div class="mySlides">
@@ -155,79 +369,79 @@ body
   				</div>
   				
   				 <div class="mySlides">
-  		 			<h2>Bazigar</h2>
+  		 			<h2> The Ambitious </h2>
   				</div>
   				
   				
   				<div class="mySlides">
-  		 			<h2>Maa Ka Ladla</h2>
+  		 			<h2>Like Mother , Like Son</h2>
   				</div>
   				
   				
   				<div class="mySlides">
-  		 			<h2>Loving</h2>
+  		 			<h2> Loving </h2>
   				</div>
   				
   				<div class="mySlides">
-  		 			<h2>Emotional</h2>
+  		 			<h2> Emotional Toward Work </h2>
   				</div>
   				
     			<div class="mySlides">
-  		 			<h2>Hero</h2>
+  		 			<h2> Hero </h2>
   				</div>				
   				
   				<div class="mySlides">
-  		 			<h2>Chanchal</h2>
+  		 			<h2> Extremely Zealous </h2>
   				</div>	
   				
   				
   				 <div class="mySlides">
-  		 			<h2>Cutest</h2>
+  		 			<h2> Cutest </h2>
   				</div>
   				
   				<div class="mySlides">
-  		 			<h2>True Happy Lover</h2>
-  				</div>
-  				
-  				
-  				
-  				<div class="mySlides">
-  		 			<h2>Bade Diwala</h2>
+  		 			<h2> True Happy Lover </h2>
   				</div>
   				
   				
   				
-  				
   				<div class="mySlides">
-  		 			<h2>Sensitive</h2>
+  		 			<h2> Learns From Mistakes </h2>
   				</div>
   				
   				
   				
   				
   				<div class="mySlides">
-  		 			<h2>Good Person</h2>
+  		 			<h2> Sensitive </h2>
+  				</div>
+  				
+  				
+  				
+  				
+  				<div class="mySlides">
+  		 			<h2> Good Person </h2>
   				</div>
   				
   				
   				 <div class="mySlides">
-  		 			<h2>Caring</h2>
+  		 			<h2> Caring </h2>
   				</div>
   				
   				
   				 <div class="mySlides">
-  		 			<h2>Smart Insan</h2>
+  		 			<h2> The Fashionista </h2>
   				</div>
   				
   				
   				<div class="mySlides">
-  		 			<h2>Sweet & Kind</h2>
+  		 			<h2> The Nerd </h2>
   				</div>
   				
   				
   				
   				<div class="mySlides">
-  		 			<h2>Smart & Honesty</h2>
+  		 			<h2> Smart and Honesty </h2>
   				</div>
   				
   				
@@ -238,33 +452,39 @@ body
   				
   				
   				<div class="mySlides">
-  		 			<h2>Active</h2>
+  		 			<h2>The Analyst Leader </h2>
   				</div>
   				
   				
-   			</div>
+   			
   			</div>
   			</div> 				
   					
   					
   				<div class="contain">
-  					<img alt="hi" src="img\mountain2.jpg" style="width: 150px;">
+  					<img alt="hi" src="img\mountain2.jpg" style="width: 30%;">
   					<h1>Take a Screen Shoot</h1>	
   				</div>
   			
   			
-  				
+  				<div class="contain">
+  					<
+  				</div>
   			
   			
   		</div>
+		
+			
 
   		
+
   		
-  		
-  		
+  		  		
   		
 	</div>
 </div>
+
+
 
 
 <script>
@@ -283,6 +503,14 @@ function carousel() {
     setTimeout(carousel, 25); 
 }
 </script>
+
+
+
+
+
+
+
+
 
 
 </body>
