@@ -142,8 +142,7 @@ background-color: #EC8911;		/*   // orange   */
 
 
 
-@media only screen and 
-					@media (min-width:320px) 		(max-device-width: 480px)		/* styles for mobile browsers smaller than 480px; (iPhone) */
+@media only screen and 	(max-device-width: 480px)		/* styles for mobile browsers smaller than 480px; (iPhone) */
   {
   
   
@@ -177,7 +176,7 @@ background-color: #EC8911;		/*   // orange   */
 
 
 
-@media only screen and (device-width:768px)	@media (min-width:801px)	/* default iPad screens */
+@media only screen and (device-width:768px)		/* default iPad screens */
 	{
       .col-sm-12 
       		{
