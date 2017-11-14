@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Value</title>
+
+<!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
+
+	
+
+
+
+
+
+
+<style type="text/css">
+
+
+
+
+
+
+
+.selection{
+				width: 180px;
+				height: 60px;
+				margin: 20px;
+				padding: 15px;
+				font-size: 20px;
+			}
+			
+			
+select option {
+						padding: 20px;
+						margin:20px;
+						font-family: sans-serif;
+					
+						
+					}
+
+	
+			
+	.brown{
+				background-color: brown;
+				width: 180px;
+				height: 60px;
+				margin: 20px;
+				padding: 15px;
+				font-size: 20px;
+			}
+			
+			
+		.red{
+				background-color: red;
+				width: 180px;
+				height: 60px;
+				margin: 20px;
+				padding: 15px;
+				font-size: 20px;
+			}
+			
+			
+		.green{
+				background-color: green;
+				width: 180px;
+				height: 60px;
+				margin: 20px;
+				padding: 15px;
+				font-size: 20px;
+			}
+			
+			
+		.blue{
+				background-color: blue;
+				width: 180px;
+				height: 60px;
+				margin: 20px;
+				padding: 15px;
+				font-size: 20px;
+			}
+			
+			
+			
+		th {
+				margin: 10px;
+				padding: 5px;
+				text-align: center;
+				
+				
+			}
+
+</style>
+
+
+</head>
+<body>
+
+
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-md-10 col-lg-10">
+				<table  class="table">
+					<thead>
+					<tr> 
+						<th> Band-1 </th>
+						<th> Band-2 </th>
+						<th> Band-3 </th>
+						<th> Band-4 </th>
+						<th> Band-5 </th>
+					</tr>
+					</thead>
+					
+					<tr> 
+						<td> 
+							<select  onchange="this.className=this.options[this.selectedIndex].className" class="selection" >
+				
+								<option selected="selected" >Select</option> 
+								<option class="brown"> Brown </option>
+								<option class="red"> red </option>
+								<option class=" blue"> blue </option>
+							</select>
+						
+						 </td>
+						
+						<td> 
+							<select  onchange="this.className=this.options[this.selectedIndex].className" class="selection" >
+				
+								<option selected="selected" >Select</option> 
+								<option class="brown"> Brown </option>
+								<option class="red"> red </option>
+								<option class=" blue"> blue </option>
+							</select>
+						
+						 </td>
+						 
+						 <td> 
+							<select  onchange="this.className=this.options[this.selectedIndex].className" class="selection" >
+				
+								<option selected="selected" >Select</option> 
+								<option class="brown"> Brown </option>
+								<option class="red"> red </option>
+								<option class=" blue"> blue </option>
+							</select>
+						
+						 </td>
+						 
+						 
+						 <td> 
+							<select  onchange="this.className=this.options[this.selectedIndex].className" class="selection" >
+				
+								<option selected="selected" >Select</option> 
+								<option class="brown"> Brown </option>
+								<option class="red"> red </option>
+								<option class=" blue"> blue </option>
+							</select>
+						
+						 </td>
+						
+						
+						<td> 
+							<select  onchange="this.className=this.options[this.selectedIndex].className" class="selection" >
+				
+								<option selected="selected" >Select</option> 
+								<option class="brown"> Brown </option>
+								<option class="red"> red </option>
+								<option class=" blue"> blue </option>
+							</select>
+						
+						 </td>
+						
+						
+						
+						
+						
+						
+						
+						
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript">
+
+	
+	
+	var select = document.getElementById('mySelect');
+	select.onchange = function () {
+	    select.className = this.options[this.selectedIndex].className;
+	}
+	
+	
+	
+	
+	
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
