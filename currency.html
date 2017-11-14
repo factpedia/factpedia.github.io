@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Currency Converter</title>
+
+
+
+<!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<SCRIPT language="javascript">
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var colCount = table.rows[0].cells.length;
+
+			for(var i=0; i<colCount; i++) {
+
+				var newcell	= row.insertCell(i);
+
+				newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+				//alert(newcell.childNodes);
+				switch(newcell.childNodes[0].type) {
+					case "text":
+							newcell.childNodes[0].value = "";
+							break;
+					case "checkbox":
+							newcell.childNodes[0].checked = false;
+							break;
+					case "select-one":
+							newcell.childNodes[0].selectedIndex = 0;
+							break;
+				}
+			}
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					if(rowCount <= 1) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</SCRIPT>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+<style type="text/css">
+
+th , td {
+		text-align: center;
+		
+	}
+	
+	
+	
+table {
+			padding: 20px;
+			margin: 30px 0 0 0;
+		}
+
+</style>
+	
+
+</head>
+<body>
+
+
+
+
+
+
+
+	<INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
+
+	<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+
+
+
+
+
+
+	
+	<table class="table" id="dataTable" >
+		<thead>
+			<tr>
+				<th> Name </th>
+				<th> Age </th>
+				<th> Car DL </th>
+				<th> Salary </th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td> Pavan </td>
+				<td> 25 </td>
+				<td> NO </td>
+				<td> 25K </td>
+			</tr>
+			
+			<tr>
+				<td> Pavan </td>
+				<td> 25 </td>
+				<td> NO </td>
+				<td> 25K </td>
+			</tr>
+			
+			<tr>
+				<td> Pavan </td>
+				<td> 25 </td>
+				<td> NO </td>
+				<td> 25K </td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	
+	
+	
+
+
+</body>
+</html>
+
+
